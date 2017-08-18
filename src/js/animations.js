@@ -10,10 +10,9 @@ export default function() {
 
     const headerScene = new ScrollMagic.Scene({
       triggerElement: header,
-      offset: -95
+      offset: -195
     })
     .setClassToggle(`#slide0${num} .uk-heading-hero`, 'is-active')
-    // .addIndicators()
     .addTo(controller);
   });
 
@@ -23,6 +22,18 @@ export default function() {
   })
   .setClassToggle('.nav-container', 'uk-light')
   .addTo(controller);
+
+  headers.forEach(function(header, index) {
+    let num = index + 1;
+
+    const navDotsScene = new ScrollMagic.Scene({
+      triggerElement: header,
+      offset: -200,
+      duration: '100%'
+    })
+    .setClassToggle(`#nav-dot0${num}`, 'uk-active')
+    .addTo(controller);
+  });
 
   console.log('====================================');
   console.log('hello from animations');
