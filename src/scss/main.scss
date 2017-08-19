@@ -7,11 +7,8 @@
   align-items: center;
 }
 
-#fp-nav ul li a span {
-  transition: all .5s ease-in-out;
-  &.dot-light {
-    background: whitesmoke;
-  }
+.dot-light {
+  background: whitesmoke;
 }
 
 .uk-section {
@@ -34,6 +31,12 @@
   align-items: center;
   .container {
     width: 100%;
+  }
+  li.active {
+    a {
+      color: #FF6A3F;
+      font-weight: bold;
+    }
   }
   h1 {
     color: white;

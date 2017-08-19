@@ -30,10 +30,11 @@ UIkit.use(Icons);
 
 $(document).ready(function() {
   const menu = $('#menu-overlay');
-  const navDots = $('#fp-nav ul li a span');
+  const navDots = $('#fp-nav');
 
 	$('#fullpage').fullpage({
     anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    menu: '#myMenu',
     navigation: true,
     navigationPosition: 'right',
     normalScrollElements: '#menu-overlay',
